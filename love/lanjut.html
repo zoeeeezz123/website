@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+            animation: popUp 1s ease-in-out;
+        }
+
+        @keyframes popUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .heart-animation {
+            font-size: 30px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .yes-button {
+            background: #28a745;
+            color: white;
+        }
+
+        .yes-button:hover {
+            background: #1e7e34;
+            transform: scale(1.1);
+        }
+
+        .no-button {
+            background: #ff4b5c;
+            color: white;
+        }
+
+        .no-button:hover {
+            background: #d63041;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>It's kinda weird lol</h1>
+        <p class="message">
+            I want to ask you something. Tbh I'm so shy to say something like this.  
+            But yeah, anjirlah. To the point aja, can I be your girlfriend?  
+            I know I'm not a romantic person and I'm still learning to love someone again.  
+            What do you think? Do you want to take a chance with me? 🥹
+        </p>
+        <div class="button-container">
+            <button class="button yes-button" onclick="window.location.href='terima.html'">Sure! ofc you can</button>
+            <button class="button no-button" onclick="window.location.href='tolak.html'">Ew No</button>
+        </div>
+    </div>
+</body>
+</html>

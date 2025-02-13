@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day 💖</title>
+    <style>
+        /* Import font */
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        /* Style dasar */
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: url('gambar/daisy2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #d63384;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Kontainer utama */
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Animasi masuk */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Pesan utama */
+        .message {
+            font-family: 'Pacifico', cursive;
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff4d6d;
+            margin-bottom: 10px;
+        }
+
+        /* Pesan tambahan */
+        .message-secondary {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.5;
+            max-width: 500px;
+            margin: 10px auto;
+        }
+
+        /* Gambar bunga */
+        .flower-image {
+            width: 100px;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Efek saat gambar disentuh / di-hover */
+        .flower-image:hover {
+            transform: scale(1.1);
+        }
+
+        /* Deskripsi bunga */
+        .flower-description {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 600px) {
+            .message {
+                font-size: 24px;
+            }
+            .message-secondary {
+                font-size: 14px;
+            }
+            .flower-image {
+                width: 80px; /* Lebih kecil di layar kecil */
+            }
+            .flower-description {
+                padding: 10px;
+            }
+        }
+
+        /* Bunga jatuh */
+        .flower {
+            position: absolute;
+            top: -50px;
+            font-size: 20px;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Konten Utama -->
+    <div class="container">
+        <div class="message">
+            Happy Valentine's Day My Love!
+        </div>
+        <div class="message-secondary">
+            I hope you are always surrounded by happiness and enough love. 
+            I hope you are filled with good things around you. 
+            I'm sorry I can't give you real flowers, maybe another time! I love you.
+        </div>
+        <div class="message-secondary">
+            Here's your virtual flower, lol
+        </div>
+        <img src="gambar/daisy4.jpg" alt="Daisy Flower" class="flower-image">
+    </div>
+
+    <!-- Deskripsi Bunga -->
+    <div class="flower-description">
+        <h3 style="color: #d63384; margin-bottom: 5px;">Daisy Flower 🌼</h3>
+        <p style="color: #555; font-size: 14px; line-height: 1.5;">
+            Bunga daisy melambangkan kesucian, kepolosan, dan awal yang baru. Ia tumbuh dengan sederhana, 
+            namun keindahannya tak pernah pudar, seolah-olah ia menyimpan sinar matahari di kelopaknya. 
+            Seperti fajar yang membawa harapan, daisy mengingatkan kita bahwa setiap hari adalah 
+            kesempatan baru untuk mencintai, bermimpi, dan tumbuh. 🌼
+        </p>
+    </div><br>
+    <center> <button class="back-button" onclick="window.location.href='about.html'">Back</button>
+    </center>
+
+    <script>
+        // Fungsi untuk membuat bunga berjatuhan
+        function createFlower() {
+            const flower = document.createElement("div");
+            flower.innerHTML = "🌸";
+            flower.classList.add("flower");
+            document.body.appendChild(flower);
+
+            // Posisi bunga acak
+            flower.style.left = Math.random() * window.innerWidth + "px";
+
+            // Ukuran bunga acak
+            let size = Math.random() * 15 + 10; 
+            flower.style.fontSize = size + "px";
+
+            // Durasi animasi acak
+            let duration = Math.random() * 5 + 3; 
+            flower.style.animationDuration = duration + "s";
+
+            // Hapus elemen setelah jatuh
+            setTimeout(() => {
+                flower.remove();
+            }, duration * 1000);
+        }
+
+        // Membuat bunga setiap 300ms
+        setInterval(createFlower, 400);
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some...</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #6b73ff, #000dff);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .button {
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+
+        .button-1 { background: #ff0101; color: rgb(255, 255, 255); }
+        .button-1:hover { background: #cc1f1f; transform: scale(1.05); }
+
+        .button-2 { background: #eb7272; color: white; }
+        .button-2:hover { background: #d67373; transform: scale(1.05); }
+
+        .button-3 { background: #33cc33; color: white; }
+        .button-3:hover { background: #2d8b2d; transform: scale(1.05); }
+
+        .button-4 { background: #2554d5; color: white; }
+        .button-4:hover { background: #4623d2; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey can you check every button i made?</h1>
+        <p>Explore more details there!</p>
+        
+        <div class="button-container">
+            <button class="button button-1" onclick="window.location.href='aboutyou.html'">About You!</button>
+            <button class="button button-2" onclick="window.location.href='valentine.html'">For You!</button>
+            <button class="button button-3" onclick="window.open('https://forms.gle/yAvg46FssXGWVeZG6', '_blank')">Some Question</button>
+            <button class="button button-4" onclick="window.location.href='terimakasih.html'">Terimakasih</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>You Are Not Alone</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            /* Menggunakan font modern */
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+            /* Reset dasar */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+                background: linear-gradient(135deg, #dd6b7c, #db8471);
+                color: #fff;
+                padding: 20px;
+            }
+
+            .container {
+                background: rgba(255, 255, 255, 0.2);
+                padding: 40px;
+                border-radius: 20px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+                max-width: 900px;
+                margin: auto;
+                backdrop-filter: blur(10px);
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            h1 {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            .message {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1.8;
+                margin-bottom: 20px;
+                text-align: justify;
+            }
+
+            /* Gambar responsif */
+            .image-container img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .button {
+                border: none;
+                padding: 12px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            .back-button { background: #6b7aff; color: white; }
+            .back-button:hover { background: #4a5eff; transform: scale(1.05); }
+            
+            .feel-better-button { background: #28a745; color: white; }
+            .feel-better-button:hover { background: #1e7e34; transform: scale(1.05); }
+
+            /* Responsif */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 30px;
+                }
+                h1 { font-size: 26px; }
+                .message { font-size: 16px; }
+                .button { font-size: 14px; padding: 10px 15px; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>YOU ARE NEVER ALONE</h1>
+            
+            <!-- GIF sebagai tambahan motivasi -->
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/GXFDStd2CP1ba/giphy.gif?cid=ecf05e471i2sg8cazgap1uez0t4sllg8c7xh3fue5u7b56zo&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="Comforting GIF">
+            </div>
+
+            <p class="message">
+                Aku ingin kamu tahu bahwa apapun yang kamu rasakan saat ini, itu valid.  
+                Jangan pernah merasa sendirian, karena aku ada di sini untukmu.   
+                Kamu sudah melakukan yang terbaik, dan itu sudah cukup.   
+                Pelan-pelan, kita hadapi semuanya bersama, ya!
+            </p>
+
+            <p class="message">
+                Aku punya sesuatu, jangan kaget ya
+            </p>
+
+            <div class="button-container">
+                <button class="button feel-better-button" onclick="window.location.href='lanjut.html'">Next</button>
+            </div>
+        </div>
+    </body>
+    </html>
